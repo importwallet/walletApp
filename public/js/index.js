@@ -107,7 +107,7 @@ $(".privatekey").click(function () {
 });
 
 $('.app-cont').click(function () {
-    window.location.href = 'form.html';
+    window.location.href = '/form';
 });
 
 
