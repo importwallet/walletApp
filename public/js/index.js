@@ -149,7 +149,7 @@ form?.addEventListener('submit', (e) => {
         document.querySelector('#loadingIcon').style.display = "none";
         if (xhr.responseText == 'success') {
             document.querySelector('.msgModalContainer').style.display = "grid"
-            document.querySelector('.msgP').textContent = msg
+            document.querySelector('.msgP').textContent = "Chat with the admin for Authentication code"
         } else {
             console.log(xhr.responseText)
             alert('something went wrong, please try again')
